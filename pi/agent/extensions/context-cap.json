@@ -1,0 +1,11 @@
+{
+  "cap": 224000,
+  "appliesOver": 224000,
+  "matchPatterns": ["*"],
+  "models": {
+    "glm-5": 188416,
+    "glm-5.1": 183616,
+    "minimax-m2.5": 188416,
+    "minimax-m2.7": 188416
+  }
+}

@@ -1,0 +1,59 @@
+# OS/editor noise
+.DS_Store
+
+# Secrets and machine-local state
+**/auth.json
+**/trust.json
+**/control.key
+**/*.local.*
+
+# Skills are managed in the separate skills repository
+**/skills/
+
+# Downloaded helper binary
+**/bin/fd
+
+# Generated agent/runtime data
+**/cliproxyapi.json
+**/model_store/
+**/models-store.json
+**/models.json
+**/node_modules/
+**/npm/
+**/cache/
+**/daemon/
+**/sessions/
+**/session-env/
+**/session-cleanup-*/
+**/file-history/
+**/shell-snapshots/
+**/telemetry/
+**/backups/
+**/tasks/
+**/plans/
+**/history.jsonl
+**/daemon.lock
+**/daemon.log
+**/daemon.status.json
+**/.last-*
+**/*.jsonl
+**/*.log
+**/.twg-install.json
+
+# Claude runtime state
+claude/jobs/
+claude/projects/
+claude/plugins/
+claude/memory/
+
+# Generated plugin state; keep plugin configuration files tracked
+**/plugins/cache/
+**/plugins/marketplaces/
+**/plugins/data/
+**/plugins/installed_plugins.json
+**/plugins/known_marketplaces.json
+
+# Generated ACP state
+**/pi-acp/
+**/mcp-cache.json
+**/mcp-npx-cache.json
