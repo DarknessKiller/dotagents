@@ -37,6 +37,7 @@ link_config "$SOURCE_OF_TRUTH" "$HOME/.claude/CLAUDE.md"
 link_config "$REPO_DIR/pi/agent/settings.json" "$HOME/.pi/agent/settings.json"
 link_config "$REPO_DIR/pi/agent/mcp.json" "$HOME/.pi/agent/mcp.json"
 link_config "$REPO_DIR/pi/agent/hide-providers.json" "$HOME/.pi/agent/hide-providers.json"
+link_config "$REPO_DIR/pi/agent/subagents.json" "$HOME/.pi/agent/subagents.json"
 
 # OpenCode global configuration.
 link_config "$REPO_DIR/opencode/opencode.jsonc" "$HOME/.config/opencode/opencode.jsonc"

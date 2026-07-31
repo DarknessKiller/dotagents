@@ -1,0 +1,4 @@
+{
+  "defaultMaxTurns": 10,
+  "maxConcurrent": 10
+}
