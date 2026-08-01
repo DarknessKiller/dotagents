@@ -2,7 +2,7 @@
 set -euo pipefail
 
 REPO_DIR="$(cd "$(dirname "$0")" && pwd)"
-SOURCE_OF_TRUTH="$(cd "$REPO_DIR/.." && pwd)/AGENTS.md"
+SOURCE_OF_TRUTH="$(cd "$REPO_DIR" && pwd)/AGENTS.md"
 BACKUP_SUFFIX=".before-dotagents.$(date +%Y%m%d%H%M%S)"
 
 link_config() {
