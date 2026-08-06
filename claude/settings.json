@@ -1,5 +1,16 @@
 {
   "enabledPlugins": {
+    "claude-mem@thedotmack": true,
+    "ponytail@ponytail": true
+  },
+  "extraKnownMarketplaces": {
+    "ponytail": {
+      "source": {
+        "source": "github",
+        "repo": "DietrichGebert/ponytail"
+      }
+    }
+  },
     "claude-mem@thedotmack": true
   },
   "theme": "auto"
