@@ -7,9 +7,11 @@
     "npm:@tintinweb/pi-subagents",
     "npm:pi-hide-providers",
     "npm:@quintinshaw/pi-dynamic-workflows",
-    "git:github.com/DarknessKiller/pi-cliproxyapi-provider"
+    "npm:pi-context-cap",
+    "git:github.com/DarknessKiller/pi-cliproxyapi-provider",
+    "npm:pi-hashline-edit"
   ],
-  "lastChangelogVersion": "0.83.0",
+  "lastChangelogVersion": "0.84.1",
   "theme": "dark",
   "defaultProvider": "cliproxyapi",
   "defaultModel": "mimo-v2.5",

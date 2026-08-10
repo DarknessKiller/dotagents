@@ -3,6 +3,7 @@
   "model": "cliproxyapi/mimo-v2.5",
   "plugin": [
     "@dietrichgebert/ponytail",
+    "@angdrew/opencode-hashline-plugin",
     [
       "opencode-cliproxyapi",
       {
