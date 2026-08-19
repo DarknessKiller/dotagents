@@ -2,7 +2,6 @@
   "packages": [
     "npm:pi-mcp-adapter",
     "npm:@dietrichgebert/ponytail",
-    "npm:pi-context-cap",
     "npm:pi-web-access",
     "npm:@tintinweb/pi-subagents",
     "npm:pi-hide-providers",
@@ -11,7 +10,7 @@
     "git:github.com/DarknessKiller/pi-cliproxyapi-provider",
     "npm:pi-hashline-edit"
   ],
-  "lastChangelogVersion": "0.84.1",
+  "lastChangelogVersion": "0.84.2",
   "theme": "dark",
   "defaultProvider": "cliproxyapi",
   "defaultModel": "mimo-v2.5",
