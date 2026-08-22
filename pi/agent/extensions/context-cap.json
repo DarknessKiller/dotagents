@@ -1,6 +1,7 @@
 {
-  "cap": 311296,
+  "cap": 304768,
   "maxTokens": 32768,
-  "appliesOver": 272000,
-  "matchPatterns": ["mimo-v2.5","gpt-5.5","gpt-5.6"]
+  "reserveTokens": 16384,
+  "appliesOver": 240000,
+  "matchPatterns": ["mimo-v2.5","gpt-5.5","gpt-5.6", "ox-alpha"]
 }
