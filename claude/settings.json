@@ -1,4 +1,19 @@
 {
+  "$schema": "https://json.schemastore.org/claude-code-settings.json",
+  "env": {
+    "ANTHROPIC_AUTH_TOKEN": "$CLIPROXYAPI_API_KEY",
+    "ANTHROPIC_BASE_URL": "http://127.0.0.1:8317",
+    "CLAUDE_CODE_ENABLE_GATEWAY_MODEL_DISCOVERY": "1",
+    "API_TIMEOUT_MS": "600000",
+    "BASH_DEFAULT_TIMEOUT_MS": "600000",
+    "BASH_MAX_TIMEOUT_MS": "600000",
+    "CLAUDE_API_TIMEOUT": "600000",
+    "CLAUDE_CODE_MAX_CONTEXT_TOKENS": "272000",
+    "CLAUDE_AUTOCOMPACT_PCT_OVERRIDE": "95",
+    "DISABLE_TELEMETRY": "1",
+    "MCP_TIMEOUT": "30000",
+    "MCP_TOOL_TIMEOUT": "600000"
+  },
   "enabledPlugins": {
     "claude-mem@thedotmack": true,
     "ponytail@ponytail": true
@@ -11,5 +26,7 @@
       }
     }
   },
-  "theme": "auto"
+  "theme": "auto",
+  "autoCompactEnabled": true,
+  "model": "stealth/ox-alpha"
 }
