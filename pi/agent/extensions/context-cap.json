@@ -1,7 +1,7 @@
 {
-  "cap": 304768,
+  "cap": 304000,
   "maxTokens": 32768,
-  "reserveTokens": 16384,
+  "reserveTokens": 32768,
   "appliesOver": 240000,
-  "matchPatterns": ["mimo-v2.5","gpt-5.5","gpt-5.6", "ox-alpha"]
+  "matchPatterns": ["deepseek-v4-flash","ox-alpha", "gpt-5.6"]
 }

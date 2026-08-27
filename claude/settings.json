@@ -27,6 +27,5 @@
     }
   },
   "theme": "auto",
-  "autoCompactEnabled": true,
-  "model": "stealth/ox-alpha"
+  "autoCompactEnabled": true
 }
