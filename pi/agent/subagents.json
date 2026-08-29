@@ -1,4 +1,8 @@
 {
   "maxConcurrent": 16,
-  "graceTurns": 10
+  "graceTurns": 10,
+  "workflowsEnabled": true,
+  "reportUsage": true,
+  "showCost": true,
+  "showModel": true
 }

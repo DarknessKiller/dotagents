@@ -2,16 +2,13 @@
   "packages": [
     "npm:pi-mcp-adapter",
     "npm:@dietrichgebert/ponytail",
-    "npm:pi-web-access",
-    "npm:@tintinweb/pi-subagents",
-    "npm:pi-hide-providers",
-    "npm:@quintinshaw/pi-dynamic-workflows",
-    "npm:pi-context-cap",
     "git:github.com/DarknessKiller/pi-cliproxyapi-provider",
-    "npm:@narumitw/pi-goal"
+    "npm:@narumitw/pi-goal",
+    "npm:@tintinweb/pi-subagents"
   ],
-  "lastChangelogVersion": "0.84.2",
+  "lastChangelogVersion": "0.84.3",
   "theme": "dark",
   "defaultProvider": "cliproxyapi",
-  "defaultThinkingLevel": "medium"
+  "defaultThinkingLevel": "medium",
+  "enableInstallTelemetry": false
 }
