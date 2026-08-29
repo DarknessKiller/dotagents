@@ -1,0 +1,11 @@
+{
+  "concurrency": {
+    "default": 10
+  },
+  "agent": {
+    "disableDefaultAgents": true,
+    "systemPromptMode": "replace",
+    "widgetShortcut": true,
+    "showCost": true
+  }
+}
