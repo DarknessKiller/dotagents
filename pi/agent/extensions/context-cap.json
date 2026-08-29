@@ -3,5 +3,5 @@
   "maxTokens": 32768,
   "reserveTokens": 32768,
   "appliesOver": 240000,
-  "matchPatterns": ["deepseek-v4-flash","ox-alpha", "gpt-5.6"]
+  "matchPatterns": ["deepseek-v4-flash", "gpt-5.6"]
 }

@@ -1,6 +1,5 @@
 {
   "$schema": "https://opencode.ai/config.json",
-  "model": "stealth/ox-alpha",
   "plugin": [
     "@dietrichgebert/ponytail",
     [

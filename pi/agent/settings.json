@@ -13,6 +13,5 @@
   "lastChangelogVersion": "0.84.2",
   "theme": "dark",
   "defaultProvider": "cliproxyapi",
-  "defaultModel": "stealth/ox-alpha",
   "defaultThinkingLevel": "medium"
 }
