@@ -3,6 +3,7 @@ set -euo pipefail
 
 REPO_DIR="$(cd "$(dirname "$0")" && pwd)"
 SOURCE_OF_TRUTH="$(cd "$REPO_DIR" && pwd)/AGENTS.md"
+OPENCODE_SOURCE="$(cd "$REPO_DIR" && pwd)/OPENCODE.md"
 BACKUP_SUFFIX=".before-dotagents.$(date +%Y%m%d%H%M%S)"
 
 link_config() {
@@ -30,8 +31,8 @@ link_config() {
 
 # One shared agent-instructions source for all agents.
 link_config "$SOURCE_OF_TRUTH" "$HOME/.pi/agent/AGENTS.md"
-link_config "$SOURCE_OF_TRUTH" "$HOME/.config/opencode/AGENTS.md"
 link_config "$SOURCE_OF_TRUTH" "$HOME/.claude/CLAUDE.md"
+link_config "$OPENCODE_SOURCE" "$HOME/.config/opencode/AGENTS.md"
 
 # Pi global configuration.
 link_config "$REPO_DIR/pi/agent/settings.json" "$HOME/.pi/agent/settings.json"
