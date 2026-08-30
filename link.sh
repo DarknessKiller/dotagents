@@ -46,3 +46,4 @@ link_config "$REPO_DIR/opencode/opencode.jsonc" "$HOME/.config/opencode/opencode
 
 # Claude Code global configuration.
 link_config "$REPO_DIR/claude/settings.json" "$HOME/.claude/settings.json"
+link_config "$REPO_DIR/claude/statusline.sh" "$HOME/.claude/statusline.sh"
