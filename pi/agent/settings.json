@@ -5,7 +5,8 @@
     "git:github.com/DarknessKiller/pi-cliproxyapi-provider",
     "npm:@narumitw/pi-goal",
     "npm:pi-subagents-lite",
-    "npm:@quintinshaw/pi-dynamic-workflows"
+    "npm:@quintinshaw/pi-dynamic-workflows",
+    "npm:pi-caveman"
   ],
   "lastChangelogVersion": "0.84.3",
   "theme": "dark",
