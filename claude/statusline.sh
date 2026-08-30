@@ -45,9 +45,8 @@ fi
 if [ -f "$CFLAG" ] && [ ! -L "$CFLAG" ]; then
   CMODE=$(head -c 64 "$CFLAG" 2>/dev/null | tr -d '\n\r' | tr '[:lower:]' '[:upper:]')
   case "$CMODE" in
-    LITE|FULL|ULTRA|WENYAN|WENYAN-LITE|WENYAN-FULL|WENYAN-ULTRA|COMMIT|REVIEW|COMPRESS)
-      printf '\033[38;5;172m[CAVEMAN:%s]\033[0m ' "$CMODE"
-      ;;
+    ''|*[!A-Za-z_-]*) ;;
+    *) printf '\033[38;5;172m[CAVEMAN:%s]\033[0m ' "$CMODE" ;;
   esac
 fi
 
