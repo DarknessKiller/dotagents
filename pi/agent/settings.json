@@ -4,8 +4,7 @@
     "npm:@dietrichgebert/ponytail",
     "git:github.com/DarknessKiller/pi-cliproxyapi-provider",
     "npm:@narumitw/pi-goal",
-    "npm:pi-subagents-lite",
-    "npm:@quintinshaw/pi-dynamic-workflows"
+    "npm:@tintinweb/pi-subagents"
   ],
   "lastChangelogVersion": "0.84.4",
   "theme": "dark",
