@@ -16,20 +16,13 @@
   },
   "enabledPlugins": {
     "claude-mem@thedotmack": true,
-    "ponytail@ponytail": true,
-    "caveman@caveman": true
+    "ponytail@ponytail": true
   },
   "extraKnownMarketplaces": {
     "ponytail": {
       "source": {
         "source": "github",
         "repo": "DietrichGebert/ponytail"
-      }
-    },
-    "caveman": {
-      "source": {
-        "source": "github",
-        "repo": "JuliusBrussee/caveman"
       }
     }
   },
@@ -38,5 +31,6 @@
     "command": "bash ~/.claude/statusline.sh"
   },
   "theme": "auto",
-  "autoCompactEnabled": true
+  "autoCompactEnabled": true,
+  "effortLevel": "medium"
 }
