@@ -32,5 +32,6 @@
   },
   "theme": "auto",
   "autoCompactEnabled": true,
-  "effortLevel": "medium"
+  "effortLevel": "medium",
+  "includeCoAuthoredBy": false
 }
