@@ -1,0 +1,25 @@
+{
+  "agent": {
+    "forceBackground": false,
+    "graceTurns": 30,
+    "widgetMaxLines": 12,
+    "widgetDescLengthFull": 50,
+    "widgetDescLengthCompact": 30,
+    "widgetCompact": false,
+    "widgetShortcut": true,
+    "systemPromptMode": "replace",
+    "includeContextFiles": true,
+    "disableDefaultAgents": true,
+    "showTools": true,
+    "showTurns": true,
+    "showInput": true,
+    "showOutput": true,
+    "showContext": true,
+    "showCost": true,
+    "showTime": true,
+    "deltaInputTokens": true
+  },
+  "concurrency": {
+    "default": 10
+  }
+}
