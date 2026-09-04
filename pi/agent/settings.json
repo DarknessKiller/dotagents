@@ -5,12 +5,13 @@
     "git:github.com/DarknessKiller/pi-cliproxyapi-provider",
     "npm:@narumitw/pi-goal",
     "npm:@quintinshaw/pi-dynamic-workflows",
-    "npm:@router-for-me/pi-subagents-lite"
+    "npm:@router-for-me/pi-subagents-lite",
+    "npm:pi-cache-optimizer"
   ],
   "lastChangelogVersion": "0.84.4",
   "theme": "dark",
   "defaultProvider": "cliproxyapi",
   "defaultModel": "z-ai/glm-5.3-flash",
-  "defaultThinkingLevel": "medium",
+  "defaultThinkingLevel": "max",
   "enableInstallTelemetry": false
 }
