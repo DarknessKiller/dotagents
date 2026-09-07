@@ -11,7 +11,7 @@
   "lastChangelogVersion": "0.84.4",
   "theme": "dark",
   "defaultProvider": "cliproxyapi",
-  "defaultModel": "z-ai/glm-5.3-flash",
+  "defaultModel": "deepseek/deepseek-v4-flash",
   "defaultThinkingLevel": "max",
   "enableInstallTelemetry": false
 }
