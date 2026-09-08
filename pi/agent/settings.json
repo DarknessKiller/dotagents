@@ -6,7 +6,8 @@
     "npm:@narumitw/pi-goal",
     "npm:@quintinshaw/pi-dynamic-workflows",
     "npm:@router-for-me/pi-subagents-lite",
-    "npm:pi-cache-optimizer"
+    "npm:pi-cache-optimizer",
+    "npm:pi-tool-repair"
   ],
   "lastChangelogVersion": "0.84.4",
   "theme": "dark",
