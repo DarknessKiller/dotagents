@@ -9,10 +9,10 @@
     "npm:pi-cache-optimizer",
     "npm:pi-tool-repair"
   ],
-  "lastChangelogVersion": "0.84.4",
+  "lastChangelogVersion": "0.85.1",
   "theme": "dark",
   "defaultProvider": "cliproxyapi",
-  "defaultModel": "deepseek/deepseek-v4-flash",
+  "defaultModel": "deepseek-v4.1-flash",
   "defaultThinkingLevel": "max",
   "enableInstallTelemetry": false
 }
