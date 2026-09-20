@@ -7,7 +7,8 @@
     "npm:@quintinshaw/pi-dynamic-workflows",
     "npm:@router-for-me/pi-subagents-lite",
     "npm:pi-cache-optimizer",
-    "npm:pi-tool-repair"
+    "npm:pi-tool-repair",
+    "npm:pi-hashline-edit-pro"
   ],
   "lastChangelogVersion": "0.85.1",
   "theme": "dark",
