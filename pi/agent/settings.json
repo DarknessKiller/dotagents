@@ -2,18 +2,18 @@
   "packages": [
     "npm:pi-mcp-adapter",
     "npm:@dietrichgebert/ponytail",
-    "git:github.com/DarknessKiller/pi-cliproxyapi-provider",
     "npm:@narumitw/pi-goal",
     "npm:@quintinshaw/pi-dynamic-workflows",
     "npm:@router-for-me/pi-subagents-lite",
     "npm:pi-cache-optimizer",
     "npm:pi-tool-repair",
-    "npm:pi-hashline-edit-pro"
+    "npm:pi-hashline-edit-pro",
+    "npm:pi-omniroute-sync"
   ],
   "lastChangelogVersion": "0.85.1",
   "theme": "dark",
   "defaultProvider": "cliproxyapi",
   "defaultModel": "deepseek-v4.1-flash",
-  "defaultThinkingLevel": "max",
+  "defaultThinkingLevel": "low",
   "enableInstallTelemetry": false
 }

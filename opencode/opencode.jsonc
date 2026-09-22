@@ -9,6 +9,17 @@
       "baseURL": "{env:CLIPROXY_BASE_URL}",
       "apiKey": "{env:CLIPROXY_API_KEY}"
     }
-    ]
-  ]
+    ],
+    "opencode-omniroute-auth"
+  ],
+  "provider": {
+    "omniroute": {
+      "options": {
+        "baseURL": "{env:OMNIROUTE_BASE_URL}",
+        "apiMode": "chat",
+        "refreshOnList": true,
+        "modelCacheTtl": 300000
+      }
+    }
+  }
 }
