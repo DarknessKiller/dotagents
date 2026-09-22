@@ -2,6 +2,7 @@
   "packages": [
     "npm:pi-mcp-adapter",
     "npm:@dietrichgebert/ponytail",
+    "git:github.com/DarknessKiller/pi-cliproxyapi-provider",
     "npm:@narumitw/pi-goal",
     "npm:@quintinshaw/pi-dynamic-workflows",
     "npm:@router-for-me/pi-subagents-lite",
