@@ -8,8 +8,7 @@
     "npm:@router-for-me/pi-subagents-lite",
     "npm:pi-cache-optimizer",
     "npm:pi-tool-repair",
-    "npm:pi-hashline-edit-pro",
-    "npm:pi-omniroute-sync"
+    "npm:pi-hashline-edit-pro"
   ],
   "lastChangelogVersion": "0.85.1",
   "theme": "dark",
