@@ -10,7 +10,7 @@
     "npm:pi-tool-repair",
     "npm:pi-hashline-edit-pro"
   ],
-  "lastChangelogVersion": "0.85.1",
+  "lastChangelogVersion": "0.87.1",
   "theme": "dark",
   "defaultProvider": "cliproxyapi",
   "defaultModel": "deepseek-v4.1-flash",
