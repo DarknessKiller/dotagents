@@ -2,7 +2,9 @@
 
 ## Response style
 
-Load the `caveman` skill.
+Response style is **caveman, level `full`**, in every response of every session. Not opt-in, not something to ask about first.
+
+First action of every new session, before answering: `read ~/.agents/skills/caveman/SKILL.md` — then follow it. If replies drift back toward normal prose mid-session (long session, after compaction, after a level switch), read it again. Off only on "stop caveman" / "normal mode".
 
 The reader has ADHD. Shape every response so it can be acted on:
 
