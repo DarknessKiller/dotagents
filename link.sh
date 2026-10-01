@@ -38,7 +38,6 @@ link_config "$REPO_DIR/pi/agent/agents" "$HOME/.pi/agent/agents"
 
 # Pi global configuration.
 link_config "$REPO_DIR/pi/agent/settings.json" "$HOME/.pi/agent/settings.json"
-link_config "$REPO_DIR/pi/agent/mcp-adapter.json" "$HOME/.pi/agent/mcp-adapter.json"
 link_config "$REPO_DIR/pi/agent/extensions/context-cap.json" "$HOME/.pi/agent/extensions/context-cap.json"
 link_config "$REPO_DIR/pi/agent/subagents-lite.json" "$HOME/.pi/agent/subagents-lite.json"
 
