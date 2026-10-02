@@ -10,10 +10,13 @@
     "npm:pi-tool-repair",
     "npm:pi-hashline-edit-pro"
   ],
-  "lastChangelogVersion": "0.87.1",
+  "lastChangelogVersion": "1.0.0",
   "theme": "dark",
   "defaultProvider": "cliproxyapi",
   "defaultModel": "deepseek-v4.1-flash",
   "defaultThinkingLevel": "low",
-  "enableInstallTelemetry": false
+  "enableInstallTelemetry": false,
+  "extensions": [
+    "-builtin:mcp"
+  ]
 }
