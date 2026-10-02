@@ -5,7 +5,7 @@
     "git:github.com/DarknessKiller/pi-cliproxyapi-provider",
     "npm:@narumitw/pi-goal",
     "npm:@quintinshaw/pi-dynamic-workflows",
-    "git:github.com/DarknessKiller/pi-subagents-lite",
+    "npm:@router-for-me/pi-subagents-lite",
     "npm:pi-cache-optimizer",
     "npm:pi-tool-repair",
     "npm:pi-hashline-edit-pro"
