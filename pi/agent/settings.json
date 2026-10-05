@@ -8,12 +8,13 @@
     "npm:@router-for-me/pi-subagents-lite",
     "npm:pi-cache-optimizer",
     "npm:pi-tool-repair",
-    "npm:pi-hashline-edit-pro"
+    "npm:pi-hashline-edit-pro",
+    "git:github.com/DarknessKiller/pi-omniroute-sync"
   ],
-  "lastChangelogVersion": "1.0.0",
+  "lastChangelogVersion": "1.0.2",
   "theme": "dark",
-  "defaultProvider": "cliproxyapi",
-  "defaultModel": "deepseek-v4.1-flash",
+  "defaultProvider": "omni",
+  "defaultModel": "opencode-go/deepseek-v4.1-flash",
   "defaultThinkingLevel": "low",
   "enableInstallTelemetry": false,
   "extensions": [
