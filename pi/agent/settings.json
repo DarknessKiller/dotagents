@@ -11,7 +11,7 @@
     "npm:pi-hashline-edit-pro",
     "git:github.com/DarknessKiller/pi-omniroute-sync"
   ],
-  "lastChangelogVersion": "1.0.2",
+  "lastChangelogVersion": "1.1.0",
   "theme": "dark",
   "defaultProvider": "omni",
   "defaultModel": "opencode-go/deepseek-v4.1-flash",
@@ -19,5 +19,6 @@
   "enableInstallTelemetry": false,
   "extensions": [
     "-builtin:mcp"
-  ]
+  ],
+  "tuiMode": "regular"
 }
