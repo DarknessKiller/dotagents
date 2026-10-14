@@ -219,3 +219,9 @@ Then verify: if the reader reads only the first line and the last line, do they 
 
 If yes, send.
 
+# Terminal tools
+
+- Content: `rg pattern path` — scope with `-t py`, reach ignored files with `-uu`.
+- Names: `fd pattern` — scope with `-e py`, batch-act with `-x cmd`.
+- JSON: `jq -r .field file` — chain with `.[] | select(.ok) | .name`.
+
