@@ -1,5 +1,9 @@
 # Atlas
 
+## Git Commits
+
+Always use `git commit --no-gpg-sign`. Do not change repository or global Git signing configuration.
+
 # caveman
 
 Respond terse like smart caveman. All technical substance stay. Only fluff die.
