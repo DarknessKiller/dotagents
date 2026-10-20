@@ -8,11 +8,12 @@
     "BASH_DEFAULT_TIMEOUT_MS": "600000",
     "BASH_MAX_TIMEOUT_MS": "600000",
     "CLAUDE_API_TIMEOUT": "600000",
-    "CLAUDE_CODE_MAX_CONTEXT_TOKENS": "200000",
+    "CLAUDE_CODE_MAX_CONTEXT_TOKENS": "272000",
     "CLAUDE_AUTOCOMPACT_PCT_OVERRIDE": "95",
     "DISABLE_TELEMETRY": "1",
     "MCP_TIMEOUT": "30000",
-    "MCP_TOOL_TIMEOUT": "600000"
+    "MCP_TOOL_TIMEOUT": "600000",
+    "ANTHROPIC_CUSTOM_HEADERS": "x-omniroute-compression: allow-lossy"
   },
   "enabledPlugins": {
     "claude-mem@thedotmack": true,

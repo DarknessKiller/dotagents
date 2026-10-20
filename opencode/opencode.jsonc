@@ -16,7 +16,8 @@
         "baseURL": "{env:OMNIROUTE_BASE_URL}",
         "apiMode": "chat",
         "refreshOnList": true,
-        "modelCacheTtl": 300000
+        "modelCacheTtl": 300000,
+        "compression": "allow-lossy"
       }
     }
   ],
