@@ -2,6 +2,6 @@
   "cap": 272000,
   "maxTokens": 32768,
   "reserveTokens": 16384,
-  "appliesOver": 240000,
-  "matchPatterns": ["glm-5.3-flash", "deepseek-v4", "gpt"]
+  "appliesOver": 272000,
+  "matchPatterns": ["*"]
 }
