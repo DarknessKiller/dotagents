@@ -6,16 +6,17 @@
     "npm:@router-for-me/pi-subagents-lite",
     "npm:pi-cache-optimizer",
     "git:github.com/DarknessKiller/pi-omniroute-sync",
-    "npm:hashline-pi"
+    "npm:hashline-pi",
+    "npm:pi-zentui"
   ],
   "lastChangelogVersion": "1.4.0",
-  "theme": "dark",
-  "defaultProvider": "omni",
-  "defaultModel": "opencode-go/deepseek-v4.1-flash",
+  "theme": "system",
+  "defaultProvider": "cliproxyapi",
+  "defaultModel": "deepseek-v4.1-flash",
   "defaultThinkingLevel": "low",
   "enableInstallTelemetry": false,
   "extensions": [
     "-builtin:mcp"
   ],
-  "tuiMode": "regular"
+  "tuiMode": "fullscreen"
 }
