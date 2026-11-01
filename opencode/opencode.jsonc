@@ -2,7 +2,6 @@
   "$schema": "https://opencode.ai/config.json",
   "plugins": [
     "@dietrichgebert/ponytail",
-    "hashline-opencode-plugin",
     {
       "package": "./my-plugins/opencode-cliproxyapi",
       "options": {
@@ -20,8 +19,5 @@
         "compression": "allow-lossy"
       }
     }
-  ],
-  "agent": {
-    "build": { "tools": { "edit": false } }
-  }
+  ]
 }

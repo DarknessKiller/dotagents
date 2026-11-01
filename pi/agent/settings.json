@@ -7,7 +7,6 @@
     "npm:pi-cache-optimizer",
     "npm:pi-tool-repair",
     "git:github.com/DarknessKiller/pi-omniroute-sync",
-    "npm:hashline-pi",
     "npm:pi-zentui"
   ],
   "lastChangelogVersion": "1.4.0",
