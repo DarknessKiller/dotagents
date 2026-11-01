@@ -5,6 +5,7 @@
     "git:github.com/DarknessKiller/pi-cliproxyapi-provider",
     "npm:@router-for-me/pi-subagents-lite",
     "npm:pi-cache-optimizer",
+    "npm:pi-tool-repair",
     "git:github.com/DarknessKiller/pi-omniroute-sync",
     "npm:hashline-pi",
     "npm:pi-zentui"
