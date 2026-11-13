@@ -4,13 +4,13 @@
     "npm:@dietrichgebert/ponytail",
     "git:github.com/DarknessKiller/pi-cliproxyapi-provider",
     "npm:@quintinshaw/pi-dynamic-workflows",
-    "npm:@router-for-me/pi-subagents-lite",
     "npm:pi-cache-optimizer",
     "git:github.com/DarknessKiller/pi-omniroute-sync",
     "npm:hashline-pi",
-    "npm:pi-zentui"
+    "npm:pi-zentui",
+    "git:github.com/DarknessKiller/pi-subagents-lite"
   ],
-  "lastChangelogVersion": "1.4.0",
+  "lastChangelogVersion": "1.5.0",
   "theme": "system",
   "defaultProvider": "cliproxyapi",
   "defaultModel": "deepseek-v4.1-flash",
@@ -19,5 +19,9 @@
   "extensions": [
     "-builtin:mcp"
   ],
-  "tuiMode": "fullscreen"
+  "tuiMode": "fullscreen",
+  "extensionChangelogVersions": {
+    "{\"source\":\"npm:pi-mcp-adapter\",\"scope\":\"user\"}": "7.0.1",
+    "{\"source\":\"npm:pi-cache-optimizer\",\"scope\":\"user\"}": "2.10.6"
+  }
 }
