@@ -10,7 +10,7 @@
     "npm:pi-zentui",
     "git:github.com/DarknessKiller/pi-subagents-lite"
   ],
-  "lastChangelogVersion": "1.5.0",
+  "lastChangelogVersion": "1.5.2",
   "theme": "system",
   "defaultProvider": "cliproxyapi",
   "defaultModel": "deepseek-v4.1-flash",
