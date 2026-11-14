@@ -44,7 +44,7 @@ else
 fi
 
 # OpenCode configuration.
-if command -v opencode >/dev/null 2>&1; then
+if command -v opencode >/dev/null 2>&1 || command -v opencode2 >/dev/null 2>&1; then
   printf '\n== OpenCode ==\n'
   link_config "$SOURCE_OF_TRUTH" "$HOME/.config/opencode/AGENTS.md"
   link_config "$REPO_DIR/opencode/opencode.jsonc" "$HOME/.config/opencode/opencode.jsonc"
