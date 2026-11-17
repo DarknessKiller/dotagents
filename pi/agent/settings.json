@@ -8,7 +8,8 @@
     "git:github.com/DarknessKiller/pi-omniroute-sync",
     "npm:hashline-pi",
     "npm:pi-zentui",
-    "git:github.com/DarknessKiller/pi-subagents-lite"
+    "git:github.com/DarknessKiller/pi-subagents-lite",
+    "npm:@narumitw/pi-goal"
   ],
   "lastChangelogVersion": "1.5.2",
   "theme": "system",
@@ -22,6 +23,7 @@
   "tuiMode": "fullscreen",
   "extensionChangelogVersions": {
     "{\"source\":\"npm:pi-mcp-adapter\",\"scope\":\"user\"}": "7.0.1",
-    "{\"source\":\"npm:pi-cache-optimizer\",\"scope\":\"user\"}": "2.10.6"
+    "{\"source\":\"npm:pi-cache-optimizer\",\"scope\":\"user\"}": "2.10.6",
+    "{\"source\":\"npm:@narumitw/pi-goal\",\"scope\":\"user\"}": "0.55.3"
   }
 }
