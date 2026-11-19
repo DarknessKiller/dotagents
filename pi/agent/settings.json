@@ -21,5 +21,10 @@
     "-builtin:mcp"
   ],
   "tuiMode": "fullscreen",
-  "hideThinkingBlock": true
+  "hideThinkingBlock": true,
+  "extensionChangelogVersions": {
+    "{\"source\":\"npm:pi-mcp-adapter\",\"scope\":\"user\"}": "7.0.1",
+    "{\"source\":\"npm:pi-cache-optimizer\",\"scope\":\"user\"}": "2.10.6",
+    "{\"source\":\"npm:@narumitw/pi-goal\",\"scope\":\"user\"}": "0.55.3"
+  }
 }
