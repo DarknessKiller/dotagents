@@ -39,6 +39,7 @@ if command -v pi >/dev/null 2>&1; then
   link_config "$REPO_DIR/pi/agent/settings.json" "$HOME/.pi/agent/settings.json"
   link_config "$REPO_DIR/pi/agent/extensions/context-cap.json" "$HOME/.pi/agent/extensions/context-cap.json"
   link_config "$REPO_DIR/pi/agent/subagents-lite.json" "$HOME/.pi/agent/subagents-lite.json"
+  link_config "$REPO_DIR/pi/agent/zentui.json" "$HOME/.pi/agent/zentui.json"
 else
   printf 'skipped: pi is not installed\n'
 fi
