@@ -9,6 +9,8 @@
 # window shows its own mode, not whichever window wrote the shared flag last.
 
 CFG="${CLAUDE_CONFIG_DIR:-$HOME/.claude}"
+P=0   # set when a badge is printed; rows use it to place their leading newline.
+
 
 IN=""
 [ ! -t 0 ] && IFS= read -r -d '' -t 1 IN
@@ -36,9 +38,9 @@ if enabled "ponytail@ponytail"; then
     [ -f "$CFG/ponytail-modes/$H" ] && PFLAG="$CFG/ponytail-modes/$H"
   fi
   case "$(readflag "$PFLAG")" in
-    lite)  printf '\033[38;5;108m[PONYTAIL:LITE]\033[0m ' ;;
-    full)  printf '\033[38;5;108m[PONYTAIL:FULL]\033[0m ' ;;
-    ultra) printf '\033[38;5;173m[PONYTAIL:ULTRA]\033[0m ' ;;
+    lite)  printf '\033[38;5;108m[PONYTAIL:LITE]\033[0m '; P=1 ;;
+    full)  printf '\033[38;5;108m[PONYTAIL:FULL]\033[0m '; P=1 ;;
+    ultra) printf '\033[38;5;173m[PONYTAIL:ULTRA]\033[0m '; P=1 ;;
   esac
 fi
 
@@ -51,10 +53,10 @@ if enabled "caveman@caveman"; then
   # caveman 4.x writes caveman/ultracave/megacave; lite/full/ultra/wenyan* are
   # legacy values still found in old flag files.
   case "$(readflag "$CFLAG")" in
-    lite)              printf '\033[38;5;172m[CAVEMAN:LITE]\033[0m ' ;;
-    caveman|full)      printf '\033[38;5;172m[CAVEMAN:FULL]\033[0m ' ;;
-    ultracave|ultra)   printf '\033[38;5;173m[CAVEMAN:ULTRACAVE]\033[0m ' ;;
-    megacave|wenyan*)  printf '\033[38;5;172m[CAVEMAN:MEGACAVE]\033[0m ' ;;
+    lite)              printf '\033[38;5;172m[CAVEMAN:LITE]\033[0m '; P=1 ;;
+    caveman|full)      printf '\033[38;5;172m[CAVEMAN:FULL]\033[0m '; P=1 ;;
+    ultracave|ultra)   printf '\033[38;5;173m[CAVEMAN:ULTRACAVE]\033[0m '; P=1 ;;
+    megacave|wenyan*)  printf '\033[38;5;172m[CAVEMAN:MEGACAVE]\033[0m '; P=1 ;;
   esac
 fi
 
@@ -69,11 +71,12 @@ if [ -f "$TRANSCRIPT" ]; then
   # main chat (no subagents). Parsed incrementally: only bytes added since the last
   # refresh are read. Cache file: line 1 = byte offset read so far, then events.
   CACHE="$CFG/.statusline-skills"; mkdir -p "$CACHE"
-  find "$CACHE" -type f -mtime +14 -delete 2>/dev/null
   EV="$CACHE/$(basename "$TRANSCRIPT" .jsonl).ev"
+  [ -f "$EV" ] || find "$CACHE" -type f -mtime +14 -delete 2>/dev/null
   # One open fd = one snapshot of offset + events, even if another refresh replaces the file.
   { exec 3< "$EV"; } 2>/dev/null || exec 3< /dev/null
-  read -r OFF <&3; SIZE=$(wc -c < "$TRANSCRIPT" | tr -d ' ')
+  read -r OFF <&3
+  SIZE=$(wc -c < "$TRANSCRIPT" 2>/dev/null | tr -cd '0-9'); SIZE=${SIZE:-0}
   case "$OFF" in ''|*[!0-9]*) OFF=0 ;; esac
   [ "$SIZE" -lt "$OFF" ] && OFF=0   # transcript rewritten: start over
   if [ "$SIZE" -gt "$OFF" ]; then
@@ -92,10 +95,17 @@ if [ -f "$TRANSCRIPT" ]; then
         if .type == "assistant" then
           .message.content[]? | select(.type? == "tool_use" and .name == "Skill") | "claude " + .input.skill
         else
-          # Typed skills start with <command-message>; built-ins (/model, /clear...) do not.
           .message.content | strings |
           if startswith("<command-name>/clear</command-name>") then "CLEAR"
-          else capture("^<command-message>[^<]*</command-message>\\s*<command-name>/?(?<c>[^<]+)</command-name>")? | "you " + .c end
+          else
+            # Claude Code writes <command-name>/x</command-name> before <command-message>;
+            # older clients used the reverse order, so accept both.
+            (capture("^<command-name>/?(?<c>[^<]+)</command-name>")?
+             // capture("^<command-message>[^<]*</command-message>\\s*<command-name>/?(?<c>[^<]+)</command-name>")?)
+            # Built-ins carry the same markup; skip them by name. Extend as built-ins appear.
+            | select(.c as $n | ["clear","model","compact","plugin","reload-plugins","config","help"] | index($n) | not)
+            | "you " + .c
+          end
         end' 2>/dev/null
     } > "$NEW"
     # Atomic replace: overlapping refreshes write the same content, never append twice.
@@ -110,23 +120,26 @@ if [ -f "$TRANSCRIPT" ]; then
   [ "$COLS" -gt 20 ] 2>/dev/null || COLS=80
   # label, list: own row(s). Label column fixed, items wrap under the first item.
   # Width counts visible text only; colour is added after.
+  NROWS=0
   row() {
     [ -n "$2" ] || return 0
+    # First row starts on a new line only if a badge printed; later rows always do.
+    if [ "$NROWS" -gt 0 ] || [ "$P" = 1 ]; then printf '\n'; fi; NROWS=$((NROWS+1))
     printf '%s\n' "$2" | awk -F'\t' -v label="$1" -v w="$COLS" '
       BEGIN { pad = 8; D = "\033[38;5;245m"; N = "\033[38;5;110m"; R = "\033[0m"; SEP = " · " }
       { name[NR] = $1; cnt[NR] = $2 }
       END {
         out = D sprintf("%-" pad "s", label) R; used = pad; first = 1
         for (i = 1; i <= NR; i++) {
-          vis = name[i] (cnt[i] > 1 ? " ×" cnt[i] : "")
+          vw = length(name[i]) + (cnt[i] > 1 ? 2 + length(cnt[i]) : 0)  # " ×N" = 2+N cols
           txt = N name[i] R (cnt[i] > 1 ? D " ×" cnt[i] R : "")
-          need = (first ? 0 : 3) + length(vis)
+          need = (first ? 0 : 3) + vw
           if (!first && used + need > w - 1) {
-            out = out "\n" sprintf("%" pad "s", ""); used = pad; first = 1; need = length(vis)
+            out = out "\n" sprintf("%" pad "s", ""); used = pad; first = 1; need = vw
           }
           out = out (first ? "" : D SEP R) txt; used += need; first = 0
         }
-        printf "\n%s", out
+        printf "%s", out
       }'
   }
   row "Claude:" "$CLAUDE"
